@@ -1,0 +1,1026 @@
+// @font-face {
+//     font-family: 'mistralregular';
+//     src: url('./fonts/mistral-webfont.woff2') format('woff2'),
+//          url('./fonts/mistral-webfont.woff') format('woff'),
+//          url('./fonts/MISTRAL.TTF') format('truetype');
+//     font-weight: normal;
+//     font-style: normal; 
+// }
+
+// @font-face {
+//     font-family: 'mistralregular';
+//     src:  url('./fonts/mistral-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+//     line-height: 1.5;
+//   }
+ 
+  @import url('http://fonts.cdnfonts.com/css/mistral');
+ 
+                
+
+.weather_widget{
+    // width: 100%;
+    // height: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: inline-block;
+    flex-wrap: wrap;
+    background: #444E57;
+    color: #fff;
+    box-shadow: 0px 3px 26px #00000029;
+
+    &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #ad801c17;
+        filter: blur(2px);
+    } 
+
+    .weather_icon{
+        display: inline-block;
+        position: absolute;
+        top: 1.5em;
+        right: 0.5em;
+        width: 50px;
+        height: 50px;
+
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .weather_widget-top{
+        width: 100%;
+        display: inline-block;
+        position: relative;
+
+        .perc-value{
+            width: 47%;
+            display: inline-block;
+
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                display: inline-block;
+                width: 35px;
+                // filter: invert(1);
+            }
+            p{
+                font-size: 1.2em;
+                display: inline-block;
+                padding: 12px 0 0 0;
+                margin: 0;
+                vertical-align: top;
+            }
+        } 
+    }
+
+    .weather-content{  
+
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 40%;
+
+        h4{
+            width: 100%;
+            display: inline-block;
+            font-size: 3em;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+
+            span{
+                font-size: 0.7em;
+                vertical-align: text-top;
+            }
+            sup{
+                font-size: 0.5em;
+                vertical-align: top;
+            }
+        }
+        p{
+            width: 100%;
+            display: inline-block;
+            font-size: 2em;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 15px 0 0 0;
+            margin: 0;
+        } 
+    }
+
+    .daylist{
+        display: flex;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        bottom: 1.5em;
+        left: 0;
+        color: #ffffff;
+
+        li{
+            list-style: none;
+            width: 18%;
+            padding: 0 3%;
+            font-size: 1.2em;
+            text-align: center;
+
+            .label{
+                display: inline-block;
+                width: 100%;
+                margin-top: 8px;
+                font-size: 0.8em;
+            }
+            .value{
+                display: inline-block;
+                width: 100%;
+                margin-top: 10px;
+                font-size: 1.4em;
+            }
+            .status{
+                display: inline-block;
+                width: 100%;
+                margin-top: 5px;
+
+                img{
+                    max-width: 40%;
+                    max-height: 40%;
+                }
+            }
+        }
+    }
+     
+}
+
+
+.exchange_widget{
+    background-color: #4F5051;
+    
+    .uxp-widget-title-bar{
+        background-color: transparent;
+        color: #fff;
+    }
+
+    .exchange_widget_content{ 
+
+        background-color: #606365;
+        display: inline-block;
+        width: 90%;
+        margin: 0% 5%;
+        border-radius: 10px;
+        padding: 3% 0;
+        
+            .exchange_widget-top {
+                text-align: center;
+                width: 100%;
+                display: inline-block;
+                margin-top: 2em;
+
+                .uxp-form-group.inline {
+                    // width: auto;
+                    // display: inline-block;
+                    // padding: 0 1%;
+                    // text-align: left;
+                    // vertical-align: top;
+                    // background: transparent!important;
+
+                    width: 90%;
+                    display: inline-flex;
+                    padding: 0 5%;
+                    text-align: left;
+                    vertical-align: top;
+                    background: transparent !important;
+
+                    .exchange_input{
+                        min-width: 30%;
+                    }
+
+                    .equal_arrow{
+                        display: inline-block;
+                        background: #ACACAC;
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        margin-top: 8px;
+                        padding-top: 7px;
+                        
+                        img{
+                            max-width: 70%;
+                            max-height: 70%;
+                            opacity: 0.7;
+                        }
+                    }  
+                        
+                    .uxp-form-select {
+                        margin: 0 2%;
+                        min-width: 29%;
+
+                        .uxp-select-placeholder::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            right: 10px;
+                            width: 20px;
+                            height: 20px; 
+                        }
+
+                       
+                        .uxp-select-placeholder{
+
+                            &.valid{
+                                .selected{
+                                    padding-left: 22px; 
+                                    background-image: url(/images/united-states.png);
+                                    width: 25px;
+                                    height: 17px;
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-position: 0px -2px;
+                                    display: inline-block;
+                                }
+                            }
+
+                            &.invalid{
+                                .selected{
+                                    padding-left: 22px;
+                                    background-image: url(/images/european-union.png);
+                                    width: 25px;
+                                    height: 17px;
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-position: 0px -2px;
+                                    display: inline-block;
+                                }
+                            }
+                           
+                           
+
+                        }
+                    } 
+
+                }
+            }
+            .exchange_widget-bot {
+                text-align: center;
+                width: 100%;
+                display: inline-block;
+                margin-top: 3em;
+
+                .btn{
+                    background-color: #67A470;
+                    color: #fff;
+                }
+            }
+    
+    }
+}
+
+
+.Hotel_video_widget{
+    background-color: violet;
+
+    .video-react{
+        margin: 0!important;
+        padding: 0!important;
+    }
+
+    video{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.bloodmary_widget{
+ 
+background: #4f5051; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #4f5051 0%, #101010 59%, #101010 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #4f5051 0%,#101010 59%,#101010 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #4f5051 0%,#101010 59%,#101010 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f5051', endColorstr='#101010',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+    .bloodmary_widget-content{
+        // padding: 2% 3%;
+        // display: inline-block;
+        // color: #fff;
+
+        padding: 2% 4%;
+        display: inline-block;
+        color: #fff;
+        align-items: center;
+        vertical-align: middle;
+        transform: translate(-50%);
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        width: 100%;
+
+        .bloodmary_widget-content-lft{
+            float: left;
+            width: 48%;
+         
+            h4{
+                font-size: 4em;
+                padding: 0 0;
+                margin: 0em 0 0.75em 0;
+                font-family: "Mistral", sans-serif;
+                font-weight: normal;
+
+                span.offers{
+                    display: inline-block;
+                    font-size: 15px;
+                    background-color: #4F5051;
+                    border-radius: 15px;
+                    padding: 12px 2em;
+                    margin-left: 3em;
+                    text-transform: uppercase;
+
+                }
+            }
+            p{
+                font-size: 1.3em;
+                display: inline-block;
+                width: 40%;
+                line-height: 2em;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .bloodmary_widget-content-rgt{
+            float: right;
+            width: 27%;
+            display: inline-flex;
+            margin-top: 0em;
+
+            p{
+                font-size: 1.4em;
+                display: inline-block;
+                width: 50%;
+                margin-top: 7em;
+                em{
+                    font-size: 1.3em;
+                    display: inline-block;
+                    width: 100%;
+                    margin-top: 1em;
+                    font-style: normal;
+                }
+
+            }
+            .juice{
+                float: right;
+                width: 60%;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.deal_widget{ 
+   
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c12e2e+1,583c3c+68,413f3f+100 */
+background: #c12e2e; /* Old browsers */
+background: -moz-linear-gradient(top,  #c12e2e 1%, #583c3c 68%, #413f3f 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #c12e2e 1%,#583c3c 68%,#413f3f 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #c12e2e 1%,#583c3c 68%,#413f3f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c12e2e', endColorstr='#413f3f',GradientType=0 ); /* IE6-9 */
+
+        .uxp-widget-title-bar {
+            background-color: transparent;
+            color: #fff;
+            font-size: 4em;
+            padding: 1em;
+
+            .title-section{
+                .txt {
+                    font-size: 2.5em;
+                }
+            }
+        }
+
+        .deal_widget-content{ 
+    
+            padding: 7% 7%;
+            display: inline-block;
+            color: #fff;
+            align-items: center;
+            vertical-align: middle;
+            transform: translate(-50%);
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            width: 100%;
+    
+            .deal_widget-content-lft{
+                float: left;
+                width: 48%;
+             
+                h4{
+                    font-size: 2.3em;
+                    padding: 0 0;
+                    margin: 1em 0; 
+                  
+                }
+                p{
+                    font-size: 1.7em;
+                    display: inline-block;
+                    width: 80%;
+                    line-height: 2em;
+                    padding: 0;
+                    margin: 0;
+                    font-weight: bold;
+                }
+                button.prize{
+                    display: inline-block;
+                    font-size: 1.7em;
+                    background-color: #3D3A3A;
+                    border-radius: 15px;
+                    padding: 15px 1.5em;
+                    margin-left: 0;
+                    text-transform: uppercase;
+                    color: #D12828;
+                    font-weight: bold;
+                    margin-top: 1em;
+                    border: none;
+                    cursor: pointer;
+                    box-shadow: 0px 0px 5px #353030;
+                    outline: none;
+                }
+            }
+    
+            .deal_widget-content-rgt{
+                float: right;
+                width: 47%;
+                display: inline-flex;
+                margin-top: 0em;
+              
+                .pizza{
+                    float: right;
+                    width: 100%;
+                    img{
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+    
+    }
+
+    .hotel_facility_widget{
+            background-color: #4F5051;
+
+        .hotel_facility_widget_content{
+            padding: 6em 3em;
+            text-align: center;
+
+            .icon{
+                width: 5em;
+                height: 8em;
+                display: inline-block;
+                clear: both;
+                width: 100%;
+
+                .css-i4bv87-MuiSvgIcon-root{
+                        width: 4em;
+                        height: 4em;
+                        color: #fff;
+                }
+            }
+            .btn{
+                font-size: 1em;
+                background-color: #627DD6;
+                border-radius: 12px;
+                padding: 14px 0px;
+                text-align: center;
+                color: #fff;
+                font-weight: 600;
+                display: inline-block;
+                margin: 2em 0 0 0;
+                width: 80%;
+            }
+
+        }
+    }
+    
+.facility_widget{
+    width: 100%;
+    height: 100%;
+    padding: 3em;
+    display: inline-block;
+    flex-wrap: wrap;
+    background: #3E3F41;
+    color: #fff;
+    box-shadow: 0px 3px 26px #00000029;
+
+    .facility_widget-top{
+        float: left;
+        width: 100%;
+        // margin-top: 2em;
+        margin-top: 0;
+
+        .facility_widget-top_lft{
+            display: inline-block;
+            width: 29%;
+            h6, h3{
+                padding: 0;
+                float: left;
+                vertical-align: top;
+                width: 51%; 
+            }
+           h6{
+                font-size: 1.4em;
+                margin: 0 0 0em; 
+                font-weight: lighter; 
+            }
+            h3{
+                font-size: 2.1em; 
+                margin: 0.6em 0 0; 
+            }
+
+            .user_pict{
+                display: inline-block;
+                background-image: url(/images/profile.png);
+                width: 53px;
+                height: 52px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: top left;
+                margin-top: 0.8em;
+            }
+        }
+
+        .facility_widget-top_rgt{
+               float: right;
+               margin-right: 2em;
+            p{
+                font-size: 1.1em;
+                line-height: 1.8em;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .facility_widget-content{
+        // float: left;
+        // width: 100%;
+        // margin-top: 5em;
+
+        float: left;
+        width: 100%;
+        margin-top: 12em;
+        padding: 0 4%;
+
+        h5{
+            display: inline-block;
+            width: 100%;
+            font-size: 1.5em;
+            margin: 1em 0 0em 0;
+            padding: 0;
+        }
+        em{
+            display: inline-block;
+            width: 100%;
+            font-size: 1em;
+            margin: 2.5em 0 3em 0;
+            font-style: normal;
+            color: #BFBFBF;
+        }
+        p{
+            display: inline-block;
+            width: 100%;
+            font-size: 1.2em;
+            line-height: 2em;
+            margin: 2.5em 0 0 0;
+            padding: 0;
+        }
+
+        .food_offers{
+            display: inline-block;
+            background: #3E413E;
+            width: 100%;
+            border-radius: 12px;
+            padding: 2.5em 3em;
+            box-shadow: 0px 0px 8px #353535;
+            margin-bottom: 4em;
+
+            h6{
+                font-size: 1em;
+                width: 100%;
+                display: inline-block;
+                padding: 0;
+                margin: 0;
+                
+                span{
+                    color: #008D16;
+                }
+            }
+            h3{
+                font-size: 3em;
+                margin: 0;
+                padding: 1em 0 0.5em 0;
+                display: inline-block;
+                width: 100%;
+
+                .offer_percentage{ 
+                    background: #84A37E;
+                    padding: 12px 1.7em;
+                    border-radius: 15px;
+                    font-size: 18px;
+                    float: right;
+                }
+            }
+            
+        }
+
+
+        .foodlist{
+            display: inline-block;
+            width: 70%;
+            padding: 0;
+
+            li{
+                display: inline-block;
+                width: 21%;
+                background: #4F5051;
+                height: 85%;
+                margin: 2em 3.2em 1.2em 0em;
+                border-radius: 10px;
+                box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.1607843137);
+                text-align: center;
+                padding-top: 1em;
+                cursor: pointer;
+               
+
+                .pict{
+                    display: inline-block;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 2px solid transparent;
+
+                    img{
+                        // max-width: 100%;
+                        // max-height: 100%;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .label{
+                    display: inline-block;
+                    width: 100%;
+                    font-size: 1em;
+                    color: #fff;
+                    margin: 2em 0;
+                }
+
+                &:hover{
+                    background: #ffffff;
+
+                    .pict{
+                        border: 2px solid #d0d0d0;
+                    }
+
+                    .label{ 
+                        color: #414141; 
+                    }
+                }
+            }
+        }
+
+        .my_order{
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+            margin-top: 3em;
+            background: #4F5051;
+            height: 57vh;
+            
+            .uxp-widget-title-bar{
+                background: #4F5051;
+            }
+
+            // .title-section{
+            //       color: #424242;
+            // }
+            .my_order-content{
+                display: inline-block;
+                color: #000000;
+                width: 100%; 
+
+                .orderlist{
+                    display: inline-block;
+                    width: 100%;
+                    padding: 0 1.5em;
+                    margin: 1em 0em 1em 0em; 
+
+                    li{
+                        display: inline-block;
+                        width: 100%;
+                        background-color: #fff;
+                        padding: 1.5em 1.2em;
+                        border-radius: 15px;
+                        color: #000000;
+                        box-shadow: 0px 3px 26px #00000029;
+
+                        .order-id{
+                            display: inline-block;
+                            background: #EBEBEB;
+                            padding: 7px 10px;
+                            color: #000000;
+                        }
+                        .order-name{
+                            display: inline-block;
+                            color: #000000;
+                            padding-left: 1em;
+                        }
+                        .order-prize{
+                            // display: inline-block;
+                            color: #000000;
+                            float: right;
+                            margin-top: 8px;
+                        }
+                    }
+
+                    &.total_orderlist{
+                        margin-top: 3em;
+                        li{
+                            display: inline-block;
+                            width: 100%;
+                            background-color: transparent;
+                            padding: 1.5em 1.2em;
+                            border-radius: 0;
+                            color: #ffffff;
+                            box-shadow: none;
+
+                            .order-name{
+                                color: #ffffff;
+                            }
+                            .order-prize{
+                                color: #ffffff;
+                            }
+
+                        }
+                    }
+                }
+
+                .checkout{
+                    display: inline-block;
+                    box-shadow: 0px 3px 26px rgba(0, 0, 0, 0.1607843137);
+                    background-color: #67A470;
+                    padding: 1em 2.5em;
+                    border-radius: 15px;
+                    border: none;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1.4em;
+                    margin: 1em 0;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 1em;
+                    transform: translate(-50%);
+                }
+            }
+        }
+
+        .my_order_food{
+            display: inline-block;
+            width: 100%;
+            vertical-align: top;
+            margin-top: 3em;
+            background: #4F5051;
+            min-height: 57vh;
+            padding-bottom: 2em;
+
+            .uxp-widget-title-bar{
+                background: #4F5051;
+            }
+
+            .my_order_food-content{
+                display: inline-block;
+                width: 100%;
+
+                .orderfood_list{
+                    display: inline-block;
+                    width: 100%;
+                    padding: 0 2%;
+                    li{
+                        display: inline-block;
+                        width: 23%;
+                        background: #707274;
+                        height: 85%;
+                        margin: 1em 1%;
+                        border-radius: 10px;
+                        box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.1607843137);
+                        text-align: left;
+                        cursor: pointer;
+                        padding: 2em 2em;
+                        position: relative;
+
+                        .food_add-btn{
+                            position: absolute;
+                            right: 10px;
+                            top: 10px;
+                            background-color: #ffffff;
+                            font-size: 2.1em;
+                            border: none;
+                            outline: none;
+                            border-radius: 50%;
+                            padding: 0;
+                            margin: 0;
+                            width: 28px;
+                            height: 28px;
+                            box-shadow: 0px 3px 25px rgb(0 0 0 / 40%);
+                            cursor: pointer;
+                        }
+
+                        .order-img{
+                            display: inline-block;
+                            width: 100%;
+                            /* height: 120px; */
+                            border-radius: 10px;
+                            overflow: hidden;
+                            border: 2px solid transparent;
+                            /* padding: 1em 2em; */
+
+                              img {
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 10px;
+                              } 
+                        }
+                        .order-name{
+                            display: inline-block;
+                            width: 100%;
+                            font-size: 1em;
+                            color: #000000;
+                            padding: 1em 0 0.5em 0em;
+                        }
+                        .order-prize{
+                            display: inline-block;
+                            width: 100%;
+                            font-size: 1em;
+                            color: #DCDCDC;
+                            margin: 1em 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .room_services{ 
+            .room_services_list{
+                margin: 2em 0 0 0;
+                padding: 0;
+                display: inline-block;
+                width: 100%;
+
+                li{
+                    // display: inline-block;
+                    // width: 23%;
+                    // background: #4F5051;
+                    // min-height: 35vh;
+                    // margin: 1em 1%;
+                    // border-radius: 10px;
+                    // box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.1607843137);
+                    // cursor: pointer;
+                    // padding: 2em 2em;
+                    // position: relative;
+                    // text-align: center;
+
+                    display: inline-block;
+                    width: 22%;
+                    background: #4F5051;
+                    min-height: 35vh;
+                    margin: 2em 4% 2em 0%;
+                    border-radius: 10px;
+                    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.1607843137);
+                    cursor: pointer;
+                    padding: 2em 2em;
+                    position: relative;
+                    text-align: center;
+
+                    .icon{
+                        width: 5em;
+                        height: 8em;
+                        display: inline-block;
+                        clear: both;
+                        width: 100%; 
+                        margin-top: 3em;
+
+        
+                        .css-i4bv87-MuiSvgIcon-root{
+                                width: 4em;
+                                height: 4em;
+                                color: #A7A7A7;
+                        }
+                    }
+                    .btn{
+                        font-size: 1em;
+                        background-color: #627DD6;
+                        border-radius: 12px;
+                        padding: 14px 0px;
+                        text-align: center;
+                        color: #fff;
+                        font-weight: 600;
+                        display: inline-block;
+                        margin: 2em 0 0 0;
+                        width: 80%;
+                    }
+
+                    &:nth-child(4n){
+                        margin-right: 0;
+                    }
+                }
+            }
+
+        }
+
+
+        .roomservices_popup{
+            display: inline-block;
+
+            .roomservices_popup-content{
+                display: inline-block;
+                
+            }
+        }
+
+       
+    }
+
+    .facility_pict{
+        display: inline-block;
+        width: 100%;
+        height: 49em;
+        margin-top: 2em;
+
+        img{
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+    }
+
+}
+
+.modal-container.full-widget{ 
+   
+
+    .modal-panel{
+        background-color: #3E3F41;
+        color: #ffffff;
+
+        & > .modal-header {
+           display: none;
+        }
+
+        .modal-header { 
+            border-bottom: 0px solid #e8e0fe;
+            position: fixed;
+            top: 0;
+            padding: 2em 4%;
+            left: 0;
+            background: #3E3F41;
+            z-index: 1;
+
+            .model_close{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: white;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC4zMjUiIGhlaWdodD0iMTAuMDYzIiB2aWV3Qm94PSIwIDAgMTAuMzI1IDEwLjA2MyI+PGRlZnM+PHN0eWxlPi5he29wYWNpdHk6MC4yNDt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImEiIGQ9Ik01LjkzMSwxMi4wMzZsLS41MTIuNTEyYS41NTEuNTUxLDAsMCwxLS43ODEsMEwuMTU5LDguMDcxYS41NTEuNTUxLDAsMCwxLDAtLjc4MWw0LjQ4LTQuNDhhLjU1MS41NTEsMCwwLDEsLjc4MSwwbC41MTIuNTEyYS41NTQuNTU0LDAsMCwxLS4wMDkuNzlMMy4xNDUsNi43NTdIOS43NjhhLjU1Mi41NTIsMCwwLDEsLjU1My41NTN2LjczN2EuNTUyLjU1MiwwLDAsMS0uNTUzLjU1M0gzLjE0NWwyLjc3NywyLjY0NUEuNTUuNTUsMCwwLDEsNS45MzEsMTIuMDM2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDQgLTIuNjQ3KSIvPjwvc3ZnPg==");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 30%;
+                cursor: pointer;
+                position: absolute;
+                left: 1em;
+            }
+        }
+    } 
+
+  
+
+} 

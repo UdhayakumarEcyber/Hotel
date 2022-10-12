@@ -1,0 +1,101 @@
+{
+    "id": "332fae38-2696-4f54-83fe-5759ad43c729",
+    "author": "",
+    "widgets": [
+        {
+            "id": "Weather",
+            "name": "Weather",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        },
+        {
+            "id": "ExchangeRate",
+            "name": "ExchangeRate",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        },
+        {
+            "id": "HotelVideo",
+            "name": "HotelVideo",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        },
+        {
+            "id": "SwimmingPool",
+            "name": "SwimmingPool",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        },
+        {
+            "id": "HotelClub",
+            "name": "HotelClub",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        },
+        
+        {
+            "id": "Massage_parlour",
+            "name": "Massage Parlour",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        },
+        {
+            "id": "Gymnasium",
+            "name": "Gymnasium",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        },
+        {
+            "id": "Bloodmary",
+            "name": "Bloodmary",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        },
+        {
+            "id": "Deals",
+            "name": "Deals",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        },
+        {
+            "id": "Fitness",
+            "name": "Fitness",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        },
+        {
+            "id": "SwimmingPool",
+            "name": "SwimmingPool",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        },
+        
+        {
+            "id": "MassageParlour",
+            "name": "MassageParlour",
+            "description": "A sample widget",
+            "icon": "",
+            "tags":[]
+        }
+    ],
+    "sidebarLinks": [
+        
+    ],
+    "uis": [
+       
+    ],
+    "menuItems": [
+        
+    ]
+}
